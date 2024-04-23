@@ -1,0 +1,16 @@
+/****** Mobile first ***********/
+.header_logo {
+    width: 50%;
+}
+
+.fonctionnement_ {
+    background-color:#9356DC ;
+    border-radius: 30px
+
+
+}
+
+.fonctionnement_list ul{
+    list-style-type: none;
+}
+
