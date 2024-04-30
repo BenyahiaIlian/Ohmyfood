@@ -1,0 +1,51 @@
+.body {
+  background-color: #FFFFFF;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+.header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+
+.fonctionnemment li {
+  list-style-type: none;
+}
+
+.info title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.info button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards img {
+  width: 100%;
+  height: 380px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=index.css.map */
