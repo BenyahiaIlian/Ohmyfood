@@ -1,0 +1,35 @@
+.main {
+    padding-top: 0;
+    background: #fff;
+  
+    &__banniere {
+      width: 100%;
+      object-fit: cover;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    background: $main-bg-color;}
+    &__title {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        width: 100%;
+        font-weight: 400;
+        font-size: 28px;
+        background: $main-bg-color;
+        font-family: "Roboto", sans-serif;}
+    &__btn{
+      background: $Linear_gradient;
+        width: 200px;
+        border-radius: 28px;
+        padding: 13px 0;
+        align-items: center;
+        justify-content: center;
+        color: #eaeaea;
+    }
+
