@@ -1,53 +1,153 @@
 .location {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+}
+
+.info {
+  text-align: center;
+  background-color: $main-bg-color;
+  padding: 40px 30px 50px;
+  display: grid;
+  justify-items: center;
+  gap: 15px;
+  &__title {
+    font-size: 24px;
+    @media (min-width: $desktop) {
+      font-size: 40px;
+      & br {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  &__btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 16px 25px;
+    background: $Linear_gradient;
+    border-radius: 28px;
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+  }
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 48px 20px;
+  @media (min-width: $desktop) {
+    padding: 48px 180px;
+  }
+  &__list {
+    display: grid;
+    gap: 25px;
+    padding-left: 11.5px;
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  }
+  & li {
+    position: relative;
+    background-color: $main-bg-color;
+    padding: 25px 34px;
+    border-radius: 20px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-color: #eaeaea;
+    gap: 25px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+    & i {
+      color: #7E7E7E;
+    }
+
+    &__3 i {
+      color: $violet
+    }
+
+    & span {
+      padding: 3px 7.5px;
+      color: white;
+      background-color: $violet;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+    }
+  }
 }
 
-.fonctionnemment{
-    display: flex;
-    flex-direction: column;
-    li {
-        list-style-type: none;
+.restaurant {
+  background-color: $main-bg-color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px 20px;
+  @media (min-width: $desktop) {
+    padding: 48px 180px;
+  }
 
+  &__cards {
+    display: grid;
+    gap: 18px;
+    @media (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 50px;
+      column-gap: 100px;
     }
-    &__1{
-        margin-top: 30px;
-    }
-
-    
+  }
 }
 
-.info{
+.cards {
+  position: relative;
 
-    padding: 40px 30px 50px;
-    &__title{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-    }
-    &__btn{
-        background: $Linear_gradient;
-        width: 200px;
-        border-radius: 28px;
-        padding: 13px 0;
-        align-items: center;
-        justify-content: center;
-        color: #eaeaea;
-    }
-}
+  img {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+  }
 
+  span {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #99E2D0;
+    color: $nouveau;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
 
-.cards{
-    img{
-  width: 100%;
-  height: 380px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  object-fit: cover;
-    }
+  }
+  
+  &__text {
+    background: white;
+    padding: 13px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  button {
+    all: unset;
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    font-size: 20px;
+  }
 }

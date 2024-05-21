@@ -1,5 +1,39 @@
-footer{
-    h3{
-        font-family: "Shrikhand", serif;
+footer {
+  padding: 22px 25px;
+  background-color: $background_footer;
+  color: white;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $desktop) {
+    padding-top: 55px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  h3 {
+    font-family: "Shrikhand", serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (min-width: $desktop) {
+      order: 1;
     }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      margin-left: auto;
+      gap: 20px;
+    }
+  }
+
+  ul i {
+    margin-right: 10px;
+  }
 }
