@@ -18,6 +18,13 @@
   isolation: isolate;
   display: grid;
   gap: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  @media (min-width: $desktop) {
+    margin-left: 192px;
+    margin-right: 192px;
+  }
 
   & .coeur {
     all: unset;
@@ -62,6 +69,8 @@
     align-items: flex-end;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
     transition: grid-template-columns linear 0.25s;
+    animation: 2s forwards load
+    
 
     & h3 {
       font-weight: 500;
@@ -115,5 +124,13 @@
     border: none;
     margin-bottom: 10px;
     justify-self: center;
+  }
+}
+@keyframes load {
+  0% {  
+    opacity: 0
+  }
+  100% {
+    opacity: 1
   }
 }

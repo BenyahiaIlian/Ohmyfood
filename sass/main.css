@@ -263,6 +263,15 @@ footer ul i {
   isolation: isolate;
   display: grid;
   gap: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .menu {
+    margin-left: 192px;
+    margin-right: 192px;
+  }
 }
 .menu .coeur {
   all: unset;
@@ -303,9 +312,8 @@ footer ul i {
   align-items: flex-end;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   transition: grid-template-columns linear 0.25s;
-}
-.menu__content h3 {
-  font-weight: 500;
+  animation: 2s forwards load .menu__content h3;
+  animation-font-weigh: 500;
 }
 .menu__content div p {
   font-weight: 300;
@@ -349,4 +357,13 @@ footer ul i {
   border: none;
   margin-bottom: 10px;
   justify-self: center;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
