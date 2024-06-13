@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: center;
   background-color: #eaeaea;
+  p{
+    padding-left: 10px;
+  }
 }
 
 .info {
@@ -149,5 +152,49 @@
     bottom: 30px;
     right: 25px;
     font-size: 20px;
+  }
+}
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px dotted $violet;
+  z-index: 30;
+  animation: rotate 3s linear infinite, hide 0.5s 3s forwards;
+}
+
+section {
+  opacity: 0;
+  animation: show 0.5s 3s forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
