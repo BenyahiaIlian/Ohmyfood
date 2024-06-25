@@ -20,14 +20,29 @@ a {
 ul {
     list-style: none;
 }
-.coeur i:hover{
-  animation: coeur 0.5s forwards;
-}
-@keyframes coeur{
-  0% {
-    background: transparent;
+
+.coeur{
+  cursor: pointer;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  border: 0;
+  i{
+    position: absolute;
+    font-size: 20px;
   }
-  100% {
-    background: linear-gradient(#9356dc,#ff79da);
+  .fa-solid{
+    opacity: 0;
+  }
+  &:hover{
+    .fa-solid{
+      opacity: 1;
+      color: transparent;
+      background: linear-gradient(#9356dc, #ff79da);
+      background-clip: text;
+    }
+    .fa-regular{
+      opacity: 0;
+    }
   }
 }
